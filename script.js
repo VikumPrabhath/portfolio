@@ -1,5 +1,5 @@
 // Typewriter effect with blinking cursor
-const text = "Hi, I'm Vikum... Welcome to my page";
+const text = "Hello, I'm Vikum... Welcome to my page";
 let i = 0;
 const speed = 100; // Typing speed in ms
 
