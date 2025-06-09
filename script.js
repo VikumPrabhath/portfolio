@@ -1,15 +1,28 @@
-// Typewriter Effect
-const text = "Hi, I'm Vikum";
+// Typewriter effect with blinking cursor
+const text = "Hi, I'm Vikum... Welcome to my page";
 let i = 0;
 const speed = 100; // Typing speed in ms
 
 function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("typewriter").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
+  if (i < text.length) {
+    document.getElementById("typewriter").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  } else {
+    // Keep blinking cursor after typing completes
+    //document.querySelector('.blink').style.animation = 'blink 0.7s infinite';
+  }
 }
+
+// Start animation when page loads
+window.onload = function() {
+  typeWriter();
+  
+  // Position cursor right after text
+  const typewriter = document.getElementById('typewriter');
+  const blink = document.querySelector('.blink');
+  blink.style.display = 'inline';
+};
 
 // Start animation when page loads
 window.onload = typeWriter;

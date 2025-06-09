@@ -86,3 +86,19 @@
   z-index: -1; /* Behind content */
   pointer-events: none; /* Allows clicking through particles */
 }
+
+/* Blinking cursor */
+.blink {
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  border-right: 2px solid #000; /* Thicker cursor */
+  color: #ff0000; /* Red cursor */
+}
