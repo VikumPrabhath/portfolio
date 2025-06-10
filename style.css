@@ -1,22 +1,28 @@
-/* Animated Gradient Background */
+/* Animated Blue Gradient Background */
 .gradient-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #03fdf1;
+  background: linear-gradient(-45deg, #011a22,#03fdf1 ); /* Light blue to dark blue */
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  z-index: -1;
 }
 
 @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 /* Flip Card Animation */
 .card {
     width: 200px;
@@ -87,18 +93,119 @@
   pointer-events: none; /* Allows clicking through particles */
 }
 
-/* Blinking cursor */
-.blink {
-  animation: blink 0.7s infinite;
+/* Hero Section Styles */
+.hero {
+
+  padding: 80px 20px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-content-left {
+  flex: 1;
+}
+
+.hero-content-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Typewriter styles */
+#typewriter {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
   font-weight: bold;
+  line-height: 1.2;
+  color: #2c3e50;
+  min-height: 180px;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+#typewriter div {
+  margin-bottom: 10px;
 }
 
-.blink {
-  border-right: 2px solid #000; /* Thicker cursor */
-  color: #ff0000; /* Red cursor */
+.hero p {
+  font-size: 1.2rem;
+  color: #bef2f7;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Floating animation for image */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  
+  .hero-content-right {
+    order: -1;
+    margin-bottom: 40px;
+  }
+  
+  #typewriter {
+    font-size: 1.8rem;
+    min-height: 150px;
+  }
+}
+
+.navbar {
+    background-color: #000303e7; /* Semi-transparent black */
+    z-index: 100;
+    padding: 10px 20px; /* Add padding for better spacing */
+    margin-top: 0%;
+    margin: 0 auto; /* Center the navbar */
+}
+
+.nav-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Changed from 'space-between' to push links to right */
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links a {
+    color: #ffffff; /* Light blue to match your gradient */
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 16px; /* Adjusted for better visibility */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #01bef7; /* Light blue to match your gradient */
+    text-shadow: 0 0 5px #01bef7; /* Optional glow effect */
 }

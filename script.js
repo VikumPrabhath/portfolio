@@ -1,27 +1,51 @@
-// Typewriter effect with blinking cursor
-const text = "Hello, I'm Vikum... Welcome to my page";
-let i = 0;
+// Typewriter effect with multi-line text (no cursor)
+const lines = [
+  "Hello,",
+  "I'm Vikum Prabhath",
+  "Welcome to my page..."
+];
+let currentLine = 0;
+let currentChar = 0;
 const speed = 100; // Typing speed in ms
+const lineDelay = 500; // Delay between lines in ms
 
 function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typewriter").textContent += text.charAt(i);
-    i++;
+  const typewriter = document.getElementById("typewriter");
+  
+  // If we've completed all lines
+  if (currentLine >= lines.length) {
+    return; // Animation complete
+  }
+  
+  // If we're still typing the current line
+  if (currentChar < lines[currentLine].length) {
+    // Get or create the current line element
+    let lineElement = typewriter.children[currentLine];
+    if (!lineElement) {
+      lineElement = document.createElement('div');
+      typewriter.appendChild(lineElement);
+    }
+    
+    // Add the next character
+    lineElement.textContent += lines[currentLine].charAt(currentChar);
+    currentChar++;
     setTimeout(typeWriter, speed);
-  } else {
-    // Keep blinking cursor after typing completes
-    //document.querySelector('.blink').style.animation = 'blink 0.7s infinite';
+  } 
+  // Move to next line
+  else {
+    currentLine++;
+    currentChar = 0;
+    setTimeout(typeWriter, lineDelay);
   }
 }
 
 // Start animation when page loads
 window.onload = function() {
-  typeWriter();
+  // Clear any existing content
+  document.getElementById("typewriter").innerHTML = '';
   
-  // Position cursor right after text
-  const typewriter = document.getElementById('typewriter');
-  const blink = document.querySelector('.blink');
-  blink.style.display = 'inline';
+  // Start typing
+  typeWriter();
 };
 
 // Start animation when page loads
