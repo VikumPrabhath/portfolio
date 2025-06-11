@@ -96,10 +96,12 @@
 /* Hero Section Styles */
 .hero {
 
-  padding: 80px 20px;
-  min-height: 80vh;
+  position: relative;
+  padding: 100px 20px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -129,13 +131,57 @@
   animation: float 3s ease-in-out infinite;
 }
 
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* Makes background slightly see-through */
+}
+
+/* Social Icons - Simple Style */
+.social-icons {
+  display: flex;          /* Makes icons sit side by side */
+  gap: 15px;             /* Space between icons */
+  margin-top: 20px;      /* Space above the icons */
+}
+
+.social-icon {
+  transition: transform 0.3s;  /* Makes the hover effect smooth */
+}
+
+.social-icon:hover {
+  transform: scale(1.1);  /* Makes icon grow a little when mouse hovers */
+}
+
+/* Makes the icons shake when clicked */
+.social-icon:active {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
 /* Typewriter styles */
 #typewriter {
   font-family: 'Arial', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
-  color: #2c3e50;
+  color: #16212c;
   min-height: 180px;
 }
 
@@ -145,9 +191,41 @@
 
 .hero p {
   font-size: 1.2rem;
-  color: #bef2f7;
+  color: #0a7781;
   margin-top: 20px;
   line-height: 1.6;
+}
+
+.hero-content-left {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* Update the image style */
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+  }
+  
+  .hero-content-left {
+    padding: 20px;
+  }
+  
+  .hero-image {
+    max-width: 250px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Floating animation for image */
