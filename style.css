@@ -111,24 +111,86 @@
   align-items: center;
   gap: 40px;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-content-left {
   flex: 1;
+  order: 1;
+  min-width: 300px;
 }
 
 .hero-content-right {
   flex: 1;
   display: flex;
   justify-content: center;
+  order: 2;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hero-content-left, .hero-content-right {
+        display: block;
+    }
+
+  .hero-content-left {
+    order: -1;
+    text-align: center;
+    }
+
+  .hero-content-right {
+    order: 0;
+    }
+
+  .image-slideshow {
+    height: 400px; /* Slightly smaller on mobile */
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+/* Image Slideshow Styles */
+.image-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 500px; /* Set a fixed height based on your image size */
 }
 
 .hero-image {
+  position: absolute;
   width: 100%;
-  max-width: 400px;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill container nicely */
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   animation: float 3s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero-image.active {
+  opacity: 1;
+  z-index: 2; /* Active image stays on top */
+}
+
+/* Make sure floating animation continues */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
 .hero-background {
@@ -159,7 +221,7 @@
 }
 
 .social-icon:hover {
-  transform: scale(1.1);  /* Makes icon grow a little when mouse hovers */
+  transform: scale(1.3);  /* Makes icon grow a little when mouse hovers */
 }
 
 /* Makes the icons shake when clicked */

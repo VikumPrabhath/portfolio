@@ -39,6 +39,38 @@ function typeWriter() {
   }
 }
 
+function startSlideshow() {
+  const images = document.querySelectorAll('.hero-image');
+  let currentIndex = 0;
+  let nextIndex = 1;
+  
+  // Show first image immediately
+  images[currentIndex].classList.add('active');
+  
+  // Preload all images to prevent flickering
+  images.forEach(img => {
+    new Image().src = img.src;
+  });
+
+  // Change image every 3 seconds
+  setInterval(() => {
+    // Get next image index (loop back to 0 after last)
+    nextIndex = (currentIndex + 1) % images.length;
+    
+    // First fade out current image
+    images[currentIndex].classList.remove('active');
+    
+    // After fade out completes, fade in next image
+    setTimeout(() => {
+      images[nextIndex].classList.add('active');
+      currentIndex = nextIndex;
+    }, 1000); // Matches our 1s transition time
+  }, 4000); // 3s display + 1s transition = 4s total
+}
+
+// Start slideshow when page loads
+window.addEventListener('load', startSlideshow);
+
 // Start animation when page loads
 window.onload = function() {
   // Clear any existing content
