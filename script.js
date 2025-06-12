@@ -182,3 +182,31 @@ window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+// Intersection Observer for scroll animations
+const aboutSection = document.querySelector('.about-section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, { threshold: 0.1 });
+
+observer.observe(aboutSection);
+
+// Skill boxes animation on hover
+const skillBoxes = document.querySelectorAll('.skill-box');
+
+skillBoxes.forEach(box => {
+  box.addEventListener('mouseenter', () => {
+    box.style.transform = 'translateY(-5px)';
+    box.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+  });
+  
+  box.addEventListener('mouseleave', () => {
+    box.style.transform = '';
+    box.style.boxShadow = '';
+  });
+});
