@@ -548,19 +548,6 @@
   text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .skill-box {
-    min-width: 80%;
-    
-  }
-  
-  .skill-items {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  }
-
-}
-
 .about-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -589,6 +576,19 @@
   color: #fff;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-box {
+    min-width: 80%;
+    
+  }
+  
+  .skill-items {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+}
+
 /* Animations */
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -610,18 +610,28 @@
 /* Responsive Design */
 @media (max-width: 768px) {
 
-  .about-btn {
-    text-align: center;
-    align-self: center;
-    justify-content: center;
-    justify-self: center;
-    justify-items: center;
+  /* Center buttons container */
+  .about-btns-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
+    width: 100%;
   }
 
-  .about-btn.secondary {
-    align-self: center;
+    /* Individual button styles */
+  .about-btn {
+    margin-right: 0;
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
   }
+
+    /* Remove right margin from last button */
+  .about-btn:last-child {
+    margin-right: 0;
+  }
+
   .about-content {
     flex-direction: column;
   }
