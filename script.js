@@ -210,3 +210,55 @@ skillBoxes.forEach(box => {
     box.style.boxShadow = '';
   });
 });
+
+// Certificate Popup Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Open popup when clicking "View Certificate"
+  document.querySelectorAll('.certificate-link a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.certificate-popup').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close popup when clicking close button (fixed version)
+  const closeBtn = document.querySelector('.close-popup');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      
+      const popup = document.querySelector('.certificate-popup');
+      popup.classList.remove('active');
+      document.body.style.overflow = '';
+      
+      // Force remove any leftover classes
+      popup.className = popup.className.replace('active', '').trim();
+    });
+  }
+
+  // Close when clicking overlay
+  const overlay = document.querySelector('.popup-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      document.querySelector('.certificate-popup').classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+});
+
+// Add this to your existing JavaScript file
+document.addEventListener('DOMContentLoaded', function() {
+  const servicesSection = document.querySelector('.services-section');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  observer.observe(servicesSection);
+});
