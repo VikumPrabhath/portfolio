@@ -741,7 +741,46 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s forwards;
-  animation-delay: calc(var(--delay) * 0.2s);
+  animation-delay: calc(var(--delay) * 0.1s);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+  box-shadow: 
+    0 25px 35px rgba(26, 122, 116, 0.15),
+    0 15px 15px rgba(0, 0, 0, 0.07);
+  border-left-width: 7px;
+}
+
+/* Add this to your existing animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add subtle pulse animation for attention */
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+/* Add this class to important timeline items */
+.timeline-item.highlight {
+  animation: 
+    fadeInUp 0.6s forwards,
+    subtlePulse 3s ease-in-out 1s infinite;
+  animation-delay: calc(var(--delay) * 0.2s), 1.5s;
 }
 
 .timeline-dot {
