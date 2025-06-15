@@ -675,25 +675,26 @@
   background-color: #c0e5dc;
   position: relative;
   overflow: hidden;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: #000000;
+  color: #0d3d3b; 
   position: relative;
 }
 
 .section-title span {
-  color: #0c7c75;
+  color: #1a7a74;
 }
 
 .section-title::after {
@@ -701,7 +702,8 @@
   position: absolute;
   width: 80px;
   height: 4px;
-  background: #137a75;
+  background: #1a7a74;
+  color: #0b9b8b;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
@@ -723,8 +725,8 @@
   width: 3px;
   background: linear-gradient(to bottom, 
     transparent 0%, 
-    #03fdf1 20%, 
-    #03fdf1 80%, 
+    #0b9b8b 20%, 
+    #0b9b8b 80%, 
     transparent 100%);
 }
 
@@ -735,7 +737,7 @@
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 9px 25px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #016966;
+  border-left: 4px solid #1a7a74;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s forwards;
@@ -749,24 +751,24 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #03fdf1;
-  border: 4px solid #011a22;
+  background: #0b9b8b;
+  border: 2px solid #064744;
   z-index: 2;
 }
 
 .cert-dot {
-  background: #f80000; /* Oracle red */
+  background: #f75b50;
 }
 
 .timeline-content h3 {
-  color: #011a22;
+  color: #064744;
   margin-top: 0;
   font-size: 1.4rem;
 }
 
 .institution {
   display: block;
-  color: #03fdf1;
+  color: #0b9b8b;
   font-weight: 600;
   margin: 8px 0;
   font-size: 1.1rem;
@@ -774,13 +776,13 @@
 
 .date {
   display: inline-block;
-  background: rgba(3, 253, 241, 0.1);
-  color: #03fdf1;
+  background: rgba(11, 155, 139, 0.1);
+  color: #1a7a74;
+  border: 1px solid rgba(11, 155, 139, 0.3);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
   margin-bottom: 15px;
-  border: 1px solid rgba(3, 253, 241, 0.3);
 }
 
 .achievements {
@@ -791,35 +793,36 @@
 }
 
 .achievement-pill {
-  background: rgba(3, 253, 241, 0.1);
-  color: #03fdf1;
+  background: rgba(26, 122, 116, 0.1);
+  color: #1a7a74;
+  border: 1px solid rgba(26, 122, 116, 0.3);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.85rem;
-  border: 1px solid rgba(3, 253, 241, 0.3);
 }
 
 .certificate-link a {
   display: inline-block;
-  background: rgba(248, 0, 0, 0.1);
-  color: #f80000;
+  background: rgba(214, 69, 69, 0.1);
+  color: #d1453b;
+  border: 1px solid rgba(214, 69, 69, 0.3);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
   text-decoration: none;
-  border: 1px solid rgba(248, 0, 0, 0.3);
   transition: all 0.3s;
   margin-top: 10px;
 }
 
 .certificate-link a:hover {
-  background: #f80000;
+  background: #d64545;
   color: white;
-  box-shadow: 0 0 15px rgba(248, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(214, 69, 69, 0.2);
 }
 
 .description {
-  color: #025e66;
+
+  color: #08635f;
   line-height: 1.7;
 }
 
