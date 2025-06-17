@@ -262,3 +262,50 @@ document.addEventListener('DOMContentLoaded', function() {
   
   observer.observe(servicesSection);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const viewAllBtn = document.getElementById('view-all-btn');
+  const projectsGrid = document.querySelector('.projects-grid');
+  const hiddenProjects = document.querySelectorAll('.hidden-project');
+  
+  // Prevent default anchor behavior
+  if (viewAllBtn) {
+    viewAllBtn.addEventListener('click', function(e) {
+      e.preventDefault(); // This stops the page from reloading
+      
+      // Toggle the show-all class
+      projectsGrid.classList.toggle('show-all');
+      
+      // Animate the hidden projects
+      hiddenProjects.forEach((project, index) => {
+        if (projectsGrid.classList.contains('show-all')) {
+          // Show projects with staggered animation
+          setTimeout(() => {
+            project.style.opacity = '1';
+            project.style.transform = 'translateY(0)';
+          }, index * 100);
+          viewAllBtn.textContent = 'Show Less';
+        } else {
+          // Hide projects
+          project.style.opacity = '0';
+          project.style.transform = 'translateY(20px)';
+          viewAllBtn.textContent = 'View All Projects';
+        }
+      });
+    });
+  }
+  
+  // Keep your existing intersection observer for animations
+  const projectsSection = document.querySelector('.projects-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  if (projectsSection) {
+    observer.observe(projectsSection);
+  }
+});

@@ -286,7 +286,7 @@
   }
   
   .hero-content-left {
-    padding: 20px;
+    max-width: 70%;
   }
   
   .hero-image {
@@ -1157,19 +1157,211 @@
   }
 
   .service-features {
-    text-align: center;
-    align-items: center;
+    padding-left: 25%;
   }
 
   .service-features li {
-    text-align: center;
-    padding-left: 0;
+    padding-left: 15px;
 
   }
   
   .service-features li::before {
-    left: 25%;
     top: 0;
     transform: translateX(-50%); /* Center the checkmark */
   }
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card:nth-child(1) { animation: fadeInUp 0.6s 0.1s forwards; }
+.project-card:nth-child(2) { animation: fadeInUp 0.6s 0.2s forwards; }
+.project-card:nth-child(3) { animation: fadeInUp 0.6s 0.3s forwards; }
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 122, 116, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-link {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.project-link i {
+  font-size: 0.9rem;
+}
+
+.project-info {
+  padding: 25px;
+}
+
+.project-info h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.project-info p {
+  color: #666;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tech span {
+  background: rgba(26, 122, 116, 0.1);
+  color: #1a7a74;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #1a7a74;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #137a75;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(26, 122, 116, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+}
+
+/* Add this to your existing CSS */
+.hidden-project {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.projects-grid.show-all .hidden-project {
+  display: block;
+}
+
+/* Loading animation */
+.loading-projects {
+  text-align: center;
+  padding: 20px;
+  display: none;
+}
+
+.loading-projects.active {
+  display: block;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #1a7a74;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
