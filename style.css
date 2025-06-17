@@ -140,6 +140,7 @@
   .hero-content-left {
     order: -1;
     text-align: center;
+    max-width: 80%;
     }
 
   .hero-content-right {
