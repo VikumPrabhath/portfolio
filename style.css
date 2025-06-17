@@ -134,13 +134,16 @@
   .hero-content {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
   }
 
   .hero-content-left {
     order: -1;
     text-align: center;
-    max-width: 80%;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 70%;
     }
 
   .hero-content-right {
@@ -162,6 +165,11 @@
 
   .social-icons {
     justify-content: center; /* Center social icons */
+  }
+
+  .hero-image {
+    max-width: 250px;
+    margin-bottom: 30px;
   }
 }
 
