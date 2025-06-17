@@ -142,7 +142,7 @@
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
-    max-width: 70%;
+    max-width: 60%;
     }
 
   .hero-content-right {
@@ -288,14 +288,6 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse;
-  }
-  
-  .hero-content-left {
-    max-width: 70%;
-  }
-  
   .hero-image {
     max-width: 250px;
     margin-bottom: 30px;
