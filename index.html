@@ -472,23 +472,163 @@
   </div>
 </section>
 
-    <!-- Animated Project Cards -->
-    <div class="projects">
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <h3>Fitness App</h3>
-                </div>
-                <div class="card-back">
-                    <p>Built with Android Studio + Google Fit API</p>
-                    <a href="#">View Project</a>
-                </div>
-            </div>
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="section-subtitle">Let's discuss your project or just say hello!</p>
+    
+    <div class="contact-container">
+      <!-- Contact Info Cards -->
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <img src="assets/icons/gmail-icon.png" alt="Email" class="icon-img">
+          </div>
+          <h3>Email Me</h3>
+          <p>vikumprabhath4@gmail.com</p>
+          <a href="mailto:vikumprabhath4@gmail.com" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
         </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <img src="assets/icons/call-icon.png" alt="Call" class="icon-img">
+          </div>
+          <h3>Call Me</h3>
+          <p>+94 76 2511 445</p>
+          <a href="tel:+94762511445" class="contact-link">Call Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <img src="assets/icons/whatsapp-icon.png" alt="Whatsapp" class="icon-img">
+          </div>
+          <h3>Whatsapp</h3>
+          <p>+94 76 2511 445</p>
+          <a href="https://wa.me/94762511445" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" required>
+            <label for="name">Your Name</label>
+            <div class="underline"></div>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" id="email" required>
+            <label for="email">Your Email</label>
+            <div class="underline"></div>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" id="subject" required>
+            <label for="subject">Subject</label>
+            <div class="underline"></div>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+            <div class="underline"></div>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <div class="submit-icon">
+              <img src="assets/icons/send-icon.png" alt="Send" class="send-icon"> 
+            </div>
+          </button>
+        </form>
+      </div>
     </div>
 
+    <!-- Add this right before the closing </div> of your contact-container -->
+    <div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.123456789012!2d79.918527!3d6.847444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTAnNTAuOCJOIDc5wrA1NScwNi43IkU!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus&z=15" 
+    width="100%" 
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"
+    class="google-map">
+  </iframe>
+</div>
 
+  <!--<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d350.1381014814633!2d79.9181938064131!3d6.847326166621747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTAnNTAuOCJOIDc5wrA1NScwNi43IkU!5e0!3m2!1sen!2slk!4v1750238700074!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+  
+  <!-- Floating Contact Bubble -->
+  <div class="contact-bubble">
+    <img src="assets/icons/contact-icon.png" alt="Contact Me" class="bubble-icon">
+  </div>
+</section>
 
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Footer Columns -->
+    <div class="footer-column">
+      <h3 class="footer-heading">Vikum Prabhath</h3>
+      <p class="footer-text">Full Stack Developer & UI/UX Designer creating digital experiences that matter.</p>
+      <div class="footer-social">
+        <a href="#" class="-social-icon"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
+        <a href="#" class="social-icon"><img src="assets/icons/linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="#" class="footer-social-icon"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
+        <a href="#" class="fosocial-icon"><img src="assets/icons/dribbble-icon.png" alt="Dribbble"></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading">Services</h3>
+      <ul class="footer-links">
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">App Development</a></li>
+        <li><a href="#">UI/UX Design</a></li>
+        <li><a href="#">Consultation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading">Newsletter</h3>
+      <p class="footer-text">Subscribe to get updates on my latest work.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Vikum Prabhath. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <a href="#home" aria-label="Back to top">
+      <img src="assets/icons/arrow-up.png" alt="Up arrow" class="back-to-top-icon">
+    </a>
+  </div>
+</footer>
+    <!-- JavaScript for Typewriter Effect -->
 
     <!-- Add right before </body> -->
 <div class="bubbles">

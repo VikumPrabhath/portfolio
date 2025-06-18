@@ -68,21 +68,6 @@ function startSlideshow() {
   }, 4000); // 3s display + 1s transition = 4s total
 }
 
-// Start slideshow when page loads
-window.addEventListener('load', startSlideshow);
-
-// Start animation when page loads
-window.onload = function() {
-  // Clear any existing content
-  document.getElementById("typewriter").innerHTML = '';
-  
-  // Start typing
-  typeWriter();
-};
-
-// Start animation when page loads
-window.onload = typeWriter;
-
 // Create bubbles
 function createBubbles() {
   const bubbles = document.querySelector('.bubbles');
@@ -109,9 +94,6 @@ function createBubbles() {
     bubbles.appendChild(bubble);
   }
 }
-
-// Run when page loads
-window.addEventListener('load', createBubbles);
 
 // Particle Effect
 const canvas = document.getElementById('particles');
@@ -185,6 +167,9 @@ window.addEventListener('resize', () => {
 
 // Intersection Observer for scroll animations
 const aboutSection = document.querySelector('.about-section');
+const servicesSection = document.querySelector('.services-section');
+const projectsSection = document.querySelector('.projects-section');
+const contactSection = document.querySelector('.contact-section');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -195,6 +180,9 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 observer.observe(aboutSection);
+observer.observe(servicesSection);
+observer.observe(projectsSection);
+observer.observe(contactSection);
 
 // Skill boxes animation on hover
 const skillBoxes = document.querySelectorAll('.skill-box');
@@ -248,30 +236,15 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Add this to your existing JavaScript file
-document.addEventListener('DOMContentLoaded', function() {
-  const servicesSection = document.querySelector('.services-section');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  observer.observe(servicesSection);
-});
-
+// Projects Show More/Less functionality
 document.addEventListener('DOMContentLoaded', function() {
   const viewAllBtn = document.getElementById('view-all-btn');
   const projectsGrid = document.querySelector('.projects-grid');
   const hiddenProjects = document.querySelectorAll('.hidden-project');
   
-  // Prevent default anchor behavior
-  if (viewAllBtn) {
+  if (viewAllBtn && projectsGrid && hiddenProjects.length) {
     viewAllBtn.addEventListener('click', function(e) {
-      e.preventDefault(); // This stops the page from reloading
+      e.preventDefault();
       
       // Toggle the show-all class
       projectsGrid.classList.toggle('show-all');
@@ -294,18 +267,91 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+});
+
+// Contact Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  const contactBubble = document.querySelector('.contact-bubble');
   
-  // Keep your existing intersection observer for animations
-  const projectsSection = document.querySelector('.projects-section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Here you would typically send the form data to a server
+      console.log('Form submitted:', { name, email, subject, message });
+      
+      // Show success message (replace with actual form submission)
+      alert('Thank you for your message! I will get back to you soon.');
+      contactForm.reset();
     });
-  }, { threshold: 0.1 });
-  
-  if (projectsSection) {
-    observer.observe(projectsSection);
   }
+  
+  if (contactBubble) {
+    contactBubble.addEventListener('click', function() {
+      // Scroll to contact section
+      document.getElementById('contact').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+
+// Footer Year Update
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Back to Top Button
+window.addEventListener('scroll', function() {
+  const backToTop = document.querySelector('.back-to-top');
+  if (window.scrollY > 300) {
+    backToTop.classList.add('active');
+  } else {
+    backToTop.classList.remove('active');
+  }
+});
+
+// Newsletter Form
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input').value;
+    // Add your newsletter submission logic here
+    alert('Thank you for subscribing!');
+    this.reset();
+  });
+}
+
+// Initialize footer animations
+const footer = document.querySelector('.footer-container');
+const footerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+if (footer) {
+  footerObserver.observe(footer);
+}
+
+// Combined window.onload event handler
+window.addEventListener('load', function() {
+  // Start slideshow
+  startSlideshow();
+  
+  // Initialize typewriter
+  document.getElementById("typewriter").innerHTML = '';
+  typeWriter();
+  
+  // Create bubbles
+  createBubbles();
 });
