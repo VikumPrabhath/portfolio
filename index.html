@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vikum's Portfolio</title>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- Navbar -->
+<body>
+    <!-- ======================
+         BACKGROUND ELEMENTS
+         ====================== -->
+    <div class="gradient-bg"></div>
+    <div class="bubbles"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- ======================
+         MAIN NAVIGATION
+         ====================== -->
     <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-links">
@@ -18,640 +30,639 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-            
     </nav>
 
-        <!-- Animated Background -->
-    <div class="gradient-bg"></div>
-
-    <!-- Hero Section -->
+    <!-- ======================
+         HERO SECTION
+         ====================== -->
     <section class="hero" id="home">
-  <!-- Background Image -->
-  <div class="hero-background">
-    <img src="assets/images/hero_background_image.jpg" alt="Background">
-  </div>
-  
-  <div class="hero-content">
-    <div class="hero-content-left">
-      <div id="typewriter"></div>
-      <p>I'm a passionate developer creating magical applications with code!</p>
-      
-        <!-- Social Media Icons - Simple Version -->
-        <div class="social-icons">
-            <!-- Facebook Icon -->
-            <a href="https://www.facebook.com/share/1P2zuqu3gf/" target="_blank" class="social-icon">
-                <img src="assets/icons/facebook.png" alt="Facebook" width="40">
-            </a>
-  
-            <!-- Instagram Icon -->
-            <a href="https://www.instagram.com/vikum_prabhath/profilecard/?igsh=MXkwMzgxdHoxZmxvOA==" target="_blank" class="social-icon">
-                <img src="assets/icons/instagram.png" alt="Instagram" width="40">
-            </a>
-  
-            <!-- LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/vikum-prabhath-a944a6298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
-                <img src="assets/icons/linkedin.png" alt="LinkedIn" width="40">
-            </a>
-
-            <!-- Github Icon -->
-            <a href="https://github.com/VikumPrabhath" target="_blank" class="social-icon">
-                <img src="assets/icons/github.png" alt="Github" width="40">
-            </a>
-        </div>
-    </div>
-
-    <div class="hero-content-right">
-        <div class="image-slideshow">
-            <img src="assets/images/hero_myself_image1.jpg" alt="Vikum Prabhath" class="hero-image active">
-            <img src="assets/images/hero_myself_image2.png" alt="Vikum Prabhath" class="hero-image">
-            <img src="assets/images/hero_myself_image3.jpg" alt="Vikum Prabhath" class="hero-image">
-        </div>
-    </div>
-  </div>
-</section>
-
-<section class="about-section" id="about">
-  <div class="container">
-    <h2 class="section-title">About <span>Me</span></h2>
-    <div class="about-content">
-      <div class="about-image">
-        <img src="assets/images/about-me.jpg" alt="Vikum Prabhath" class="profile-img">
-        <div class="circle-spin"></div>
-      </div>
-      <div class="about-text">
-        <h3>Full Stack Developer!</h3>
-        <p>
-            I'm Vikum Prabhath, a Software Engineering student specializing in full-stack development (Java/React) and IoT solutions. 
-            I build applications that bridge technology and real-world needs, like a fitness tracker integrating Google Fit API 
-            and a secure digital legacy platform with AES encryption. Passionate about Agile methodologies, I emphasize clean code, 
-            SOLID principles, and user-centric design to deliver scalable solutions. 
-        </p>
-        <p>  
-            Let’s connect to discuss tech, opportunities, or your next project!
-        </p>
-        <div class="skills-container">
-  <div class="skill-box">
-    <div class="skill-title">
-      <div class="skill-icon">
-        <img src="assets/icons/frontend-icon.png" alt="Frontend Icon" class="skill-icon-img">
-      </div>
-      <h4>Frontend</h4>
-    </div>
-    <div class="skill-items">
-      <div class="skill-item">
-        <img src="assets/icons/html5.png" alt="HTML5">
-        <span>HTML5</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/css3.png" alt="CSS3">
-        <span>CSS3</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/javascript.png" alt="JavaScript">
-        <span>JavaScript</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/react.png" alt="React">
-        <span>React</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/c.png" alt="Vue">
-        <span>C++</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="skill-box">
-    <div class="skill-title">
-      <div class="skill-icon">
-        <img src="assets/icons/backend-icon.png" alt="Backend Icon" class="skill-icon-img">
-      </div>
-      <h4>Backend</h4>
-    </div>
-    <div class="skill-items">
-      <div class="skill-item">
-        <img src="assets/icons/nodejs.png" alt="Node.js">
-        <span>Node.js</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/python.png" alt="Python">
-        <span>Python</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/php.png" alt="PHP">
-        <span>PHP</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/mysql.png" alt="MySQL">
-        <span>MySQL</span>
-      </div>
-      <div class="skill-item">
-        <img src="assets/icons/mongodb.png" alt="MongoDB">
-        <span>MongoDB</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-        
-  <div class="about-btns-container">
-    <a class="about-btn">Hire Me</a>
-    <a href="assets/docs/vikum_prabhath_cv.pdf" download class="about-btn secondary">Download CV</a>
-  </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Education Section -->
-<section id="education" class="education-section">
-  <div class="container">
-    <h2 class="section-title">Education <span>&</span> Certifications</h2>
-    
-    <div class="timeline">
-      <!-- HND in Software Engineering -->
-      <div class="timeline-item" style="--delay: 1">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Higher National Diploma in Software Engineering</h3>
-          <span class="institution">National Institute of Business Management, Colombo</span>
-          <span class="date">2024 - 2025</span>
-          <div class="achievements">
-            <!-- <div class="achievement-pill">GPA: 3.8/4.0</div> -->
-          </div>
-          <p class="description">
-            Relevant coursework: Mobile App Development, Database Systems, IOT, Robbotics, Machine Learning
-          </p>
-        </div>
-      </div>
-
-      <!-- Oracle Certification -->
-      <div class="timeline-item" style="--delay: 4">
-        <div class="timeline-dot cert-dot"></div>
-        <div class="timeline-content">
-          <h3>Oracle Database Design</h3>
-          <span class="institution">Oracle Academy</span>
-          <span class="date">2024</span>
-          <div class="certificate-link">
-            <a href="#" class="view-certificate">View Certificate</a>
-          </div>
-          <p class="description">
-            Learned advanced database architecture, SQL optimization, and PL/SQL programming
-          </p>
-        </div>
-      </div>
-      
-      <!-- Diploma -->
-      <div class="timeline-item" style="--delay: 2">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Diploma in Software Engineering</h3>
-          <span class="institution">National Institute of Business Management, Colombo</span>
-          <span class="date">2023 - 2024</span>
-          <p class="description">
-            Core studies: Programming Fundamentals, Enterprice Application Development, Web Development, OOP, Electronic & Computr Architecture
-          </p>
-        </div>
-      </div>
-      
-      <!-- Advanced Level -->
-      <div class="timeline-item" style="--delay: 3">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>G.C.E Advanced Level (Science Stream)</h3>
-          <span class="institution">Ananda Sastralaya National School, Mathugama</span>
-          <span class="date">2022</span>
-        </div>
-      </div>
-      
-      
-    </div>
-  </div>
-</section>
-
-<section class="services-section" id="services">
-  <div class="container">
-    <h2 class="section-title">My <span>Services</span></h2>
-    <p class="service-section-subtitle">Quality solutions tailored to your business needs</p>
-    
-    <div class="services-grid">
-      <div class="services-grid">
-
-  <!-- Service 1 -->
-  <div class="service-card">
-    <div class="service-icon">
-      <img src="assets/icons/frontend-icon.png" class="icon-image" alt="Frontend Development">
-    </div>
-    <h3>Frontend Development</h3>
-    <p>Beautiful, responsive websites built with modern frameworks like React, Vue, or Angular that engage your users.</p>
-    <ul class="service-features">
-      <li>Responsive Design</li>
-      <li>Performance Optimization</li>
-      <li>Cross-Browser Compatibility</li>
-    </ul>
-  </div>
-  
-  <!-- Service 2 -->
-  <div class="service-card">
-    <div class="service-icon">
-      <img src="assets/icons/backend-icon.png" class="icon-image" alt="Backend Development">
-    </div>
-    <h3>Backend Development</h3>
-    <p>Robust server-side solutions with Node.js, Python, or PHP that power your business logic and data management.</p>
-    <ul class="service-features">
-      <li>API Development</li>
-      <li>Database Design</li>
-      <li>Cloud Integration</li>
-    </ul>
-  </div>
-
-
-      <!-- Service 3 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/icons/full-stack-icon.png" class="icon-image" alt="Full-Stack Solutions">
-        </div>
-        <h3>Full-Stack Solutions</h3>
-        <p>Complete web applications from front to back with seamless integration between all components.</p>
-        <ul class="service-features">
-          <li>End-to-End Development</li>
-          <li>System Architecture</li>
-          <li>DevOps Setup</li>
-        </ul>
-      </div>
-      
-      <!-- Service 4 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/icons/ui-ux-icon.png" class="icon-image" alt="UI/UX Design">
-        </div>
-        <h3>UI/UX Design</h3>
-        <p>User-centered designs that improve engagement and conversion through intuitive interfaces.</p>
-        <ul class="service-features">
-          <li>Wireframing & Prototyping</li>
-          <li>User Research</li>
-          <li>Interaction Design</li>
-        </ul>
-      </div>
-      
-      <!-- Service 5 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/icons/mobile-devolopment-icon.png" class="icon-image" alt="Mobile-First Development">
-        </div>
-        <h3>Mobile-First Development</h3>
-        <p>Web applications designed primarily for mobile users with progressive enhancement for desktop.</p>
-        <ul class="service-features">
-          <li>PWA Development</li>
-          <li>Touch Optimization</li>
-          <li>Offline Capabilities</li>
-        </ul>
-      </div>
-      
-      <!-- Service 6 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/icons/performance-icon.png" class="icon-image" alt="Performance Optimization">
-        </div>
-        <h3>Performance Optimization</h3>
-        <p>Make your existing applications faster, more efficient, and scalable.</p>
-        <ul class="service-features">
-          <li>Code Audits</li>
-          <li>Lazy Loading</li>
-          <li>Caching Strategies</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="projects-section" id="projects">
-  <div class="container">
-    <h2 class="section-title">My <span>Projects</span></h2>
-    <p class="section-subtitle">Some of my recent work</p>
-    
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/projects/project1.jpg" alt="E-Commerce Website">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>E-Commerce Website</h3>
-          <p>Full-featured online store with payment integration</p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/projects/project2.jpg" alt="Task Management App">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>Task Management App</h3>
-          <p>Productivity application with real-time updates</p>
-          <div class="project-tech">
-            <span>Vue.js</span>
-            <span>Firebase</span>
-            <span>Tailwind CSS</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/projects/project3.jpg" alt="Portfolio Website">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>Portfolio Website</h3>
-          <p>Modern responsive portfolio design</p>
-          <div class="project-tech">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-      </div>
-    
-    
-     <!-- Additional projects (hidden by default) -->
-            <!-- Project 1 -->
-      <div class="project-card hidden-project">
-        <div class="project-image">
-          <img src="assets/projects/project1.jpg" alt="E-Commerce Website">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>E-Commerce Website</h3>
-          <p>Full-featured online store with payment integration</p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project 2 -->
-      <div class="project-card hidden-project">
-        <div class="project-image">
-          <img src="assets/projects/project2.jpg" alt="Task Management App">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>Task Management App</h3>
-          <p>Productivity application with real-time updates</p>
-          <div class="project-tech">
-            <span>Vue.js</span>
-            <span>Firebase</span>
-            <span>Tailwind CSS</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project 3 -->
-      <div class="project-card hidden-project">
-        <div class="project-image">
-          <img src="assets/projects/project3.jpg" alt="Portfolio Website">
-          <div class="project-overlay">
-            <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <h3>Portfolio Website</h3>
-          <p>Modern responsive portfolio design</p>
-          <div class="project-tech">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="view-more">
-      <a id="view-all-btn" class="btn">View All Projects</a>
-    </div>
-  </div>
-</section>
-
-<section class="contact-section" id="contact">
-  <div class="container">
-    <h2 class="section-title">Get In <span>Touch</span></h2>
-    <p class="section-subtitle">Let's discuss your project or just say hello!</p>
-    
-    <div class="contact-container">
-      <!-- Contact Info Cards -->
-      <div class="contact-info">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <img src="assets/icons/gmail-icon.png" alt="Email" class="icon-img">
-          </div>
-          <h3>Email Me</h3>
-          <p>vikumprabhath4@gmail.com</p>
-          <a href="mailto:vikumprabhath4@gmail.com" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-background">
+            <img src="assets/images/hero_background_image.jpg" alt="Background">
         </div>
         
-        <div class="contact-card">
-          <div class="contact-icon">
-            <img src="assets/icons/call-icon.png" alt="Call" class="icon-img">
-          </div>
-          <h3>Call Me</h3>
-          <p>+94 76 2511 445</p>
-          <a href="tel:+94762511445" class="contact-link">Call Now <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="contact-card">
-          <div class="contact-icon">
-            <img src="assets/icons/whatsapp-icon.png" alt="Whatsapp" class="icon-img">
-          </div>
-          <h3>Whatsapp</h3>
-          <p>+94 76 2511 445</p>
-          <a href="https://wa.me/94762511445" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form id="contactForm">
-          <div class="form-group">
-            <input type="text" id="name" required>
-            <label for="name">Your Name</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <input type="email" id="email" required>
-            <label for="email">Your Email</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <input type="text" id="subject" required>
-            <label for="subject">Subject</label>
-            <div class="underline"></div>
-          </div>
-          
-          <div class="form-group">
-            <textarea id="message" rows="5" required></textarea>
-            <label for="message">Your Message</label>
-            <div class="underline"></div>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <span>Send Message</span>
-            <div class="submit-icon">
-              <img src="assets/icons/send-icon.png" alt="Send" class="send-icon"> 
+        <div class="hero-content">
+            <!-- Left Content -->
+            <div class="hero-content-left">
+                <div id="typewriter"></div>
+                <p>I'm a passionate developer creating magical applications with code!</p>
+                
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1P2zuqu3gf/" target="_blank" class="social-icon">
+                        <img src="assets/icons/facebook.png" alt="Facebook" width="40">
+                    </a>
+                    <a href="https://www.instagram.com/vikum_prabhath/profilecard/?igsh=MXkwMzgxdHoxZmxvOA==" target="_blank" class="social-icon">
+                        <img src="assets/icons/instagram.png" alt="Instagram" width="40">
+                    </a>
+                    <a href="https://www.linkedin.com/in/vikum-prabhath-a944a6298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
+                        <img src="assets/icons/linkedin.png" alt="LinkedIn" width="40">
+                    </a>
+                    <a href="https://github.com/VikumPrabhath" target="_blank" class="social-icon">
+                        <img src="assets/icons/github.png" alt="Github" width="40">
+                    </a>
+                </div>
             </div>
-          </button>
-        </form>
-      </div>
-    </div>
 
-    <!-- Add this right before the closing </div> of your contact-container -->
-    <div class="map-container">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.123456789012!2d79.918527!3d6.847444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTAnNTAuOCJOIDc5wrA1NScwNi43IkU!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus&z=15" 
-    width="100%" 
-    height="400" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade"
-    class="google-map">
-  </iframe>
-</div>
+            <!-- Right Content -->
+            <div class="hero-content-right">
+                <div class="image-slideshow">
+                    <img src="assets/images/hero_myself_image1.jpg" alt="Vikum Prabhath" class="hero-image active">
+                    <img src="assets/images/hero_myself_image2.png" alt="Vikum Prabhath" class="hero-image">
+                    <img src="assets/images/hero_myself_image3.jpg" alt="Vikum Prabhath" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!--<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d350.1381014814633!2d79.9181938064131!3d6.847326166621747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTAnNTAuOCJOIDc5wrA1NScwNi43IkU!5e0!3m2!1sen!2slk!4v1750238700074!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-  
-  <!-- Floating Contact Bubble -->
-  <div class="contact-bubble">
-    <img src="assets/icons/contact-icon.png" alt="Contact Me" class="bubble-icon">
-  </div>
-</section>
+    <!-- ======================
+         ABOUT SECTION
+         ====================== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            
+            <div class="about-content">
+                <!-- Profile Image -->
+                <div class="about-image">
+                    <img src="assets/images/about-me.jpg" alt="Vikum Prabhath" class="profile-img">
+                    <div class="circle-spin"></div>
+                </div>
+                
+                <!-- About Text -->
+                <div class="about-text">
+                    <h3>Full Stack Developer!</h3>
+                    <p>
+                        I'm Vikum Prabhath, a Software Engineering student specializing in full-stack development (Java/React) and IoT solutions. 
+                        I build applications that bridge technology and real-world needs, like a fitness tracker integrating Google Fit API 
+                        and a secure digital legacy platform with AES encryption. Passionate about Agile methodologies, I emphasize clean code, 
+                        SOLID principles, and user-centric design to deliver scalable solutions. 
+                    </p>
+                    <p>  
+                        Let's connect to discuss tech, opportunities, or your next project!
+                    </p>
+                    
+                    <!-- Skills Container -->
+                    <div class="skills-container">
+                        <!-- Frontend Skills -->
+                        <div class="skill-box">
+                            <div class="skill-title">
+                                <div class="skill-icon">
+                                    <img src="assets/icons/frontend-icon.png" alt="Frontend Icon" class="skill-icon-img">
+                                </div>
+                                <h4>Frontend</h4>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <img src="assets/icons/html5.png" alt="HTML5">
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/css3.png" alt="CSS3">
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/javascript.png" alt="JavaScript">
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/react.png" alt="React">
+                                    <span>React</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/c.png" alt="Vue">
+                                    <span>C++</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Backend Skills -->
+                        <div class="skill-box">
+                            <div class="skill-title">
+                                <div class="skill-icon">
+                                    <img src="assets/icons/backend-icon.png" alt="Backend Icon" class="skill-icon-img">
+                                </div>
+                                <h4>Backend</h4>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <img src="assets/icons/nodejs.png" alt="Node.js">
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/python.png" alt="Python">
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/php.png" alt="PHP">
+                                    <span>PHP</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/mysql.png" alt="MySQL">
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="assets/icons/mongodb.png" alt="MongoDB">
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="about-btns-container">
+                        <a href="#contact" class="about-btn">Hire Me</a>
+                        <a href="assets/docs/vikum_prabhath_cv.pdf" download class="about-btn secondary">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Footer Columns -->
-    <div class="footer-column">
-      <h3 class="footer-heading">Vikum Prabhath</h3>
-      <p class="footer-text">Full Stack Developer & UI/UX Designer creating digital experiences that matter.</p>
-      <div class="footer-social">
-        <a href="#" class="-social-icon"><img src="assets/icons/github-icon.png" alt="GitHub"></a>
-        <a href="#" class="social-icon"><img src="assets/icons/linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="#" class="footer-social-icon"><img src="assets/icons/twitter-icon.png" alt="Twitter"></a>
-        <a href="#" class="fosocial-icon"><img src="assets/icons/dribbble-icon.png" alt="Dribbble"></a>
-      </div>
-    </div>
+    <!-- ======================
+         EDUCATION SECTION
+         ====================== -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education <span>&</span> Certifications</h2>
+            
+            <div class="timeline">
+                <!-- HND in Software Engineering -->
+                <div class="timeline-item" style="--delay: 1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Higher National Diploma in Software Engineering</h3>
+                        <span class="institution">National Institute of Business Management, Colombo</span>
+                        <span class="date">2024 - 2025</span>
+                        <p class="description">
+                            Relevant coursework: Mobile App Development, Database Systems, IOT, Robbotics, Machine Learning
+                        </p>
+                    </div>
+                </div>
 
-    <div class="footer-column">
-      <h3 class="footer-heading">Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+                <!-- Oracle Certification -->
+                <div class="timeline-item" style="--delay: 4">
+                    <div class="timeline-dot cert-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Oracle Database Design</h3>
+                        <span class="institution">Oracle Academy</span>
+                        <span class="date">2024</span>
+                        <div class="certificate-link">
+                            <a href="#" class="view-certificate">View Certificate</a>
+                        </div>
+                        <p class="description">
+                            Learned advanced database architecture, SQL optimization, and PL/SQL programming
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Diploma -->
+                <div class="timeline-item" style="--delay: 2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Diploma in Software Engineering</h3>
+                        <span class="institution">National Institute of Business Management, Colombo</span>
+                        <span class="date">2023 - 2024</span>
+                        <p class="description">
+                            Core studies: Programming Fundamentals, Enterprice Application Development, Web Development, OOP, Electronic & Computr Architecture
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Advanced Level -->
+                <div class="timeline-item" style="--delay: 3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>G.C.E Advanced Level (Science Stream)</h3>
+                        <span class="institution">Ananda Sastralaya National School, Mathugama</span>
+                        <span class="date">2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="footer-column">
-      <h3 class="footer-heading">Services</h3>
-      <ul class="footer-links">
-        <li><a href="#">Web Development</a></li>
-        <li><a href="#">App Development</a></li>
-        <li><a href="#">UI/UX Design</a></li>
-        <li><a href="#">Consultation</a></li>
-      </ul>
-    </div>
+    <!-- ======================
+         SERVICES SECTION
+         ====================== -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">My <span>Services</span></h2>
+            <p class="service-section-subtitle">Quality solutions tailored to your business needs</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/frontend-icon.png" class="icon-image" alt="Frontend Development">
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Beautiful, responsive websites built with modern frameworks like React, Vue, or Angular that engage your users.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Performance Optimization</li>
+                        <li>Cross-Browser Compatibility</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/backend-icon.png" class="icon-image" alt="Backend Development">
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Robust server-side solutions with Node.js, Python, or PHP that power your business logic and data management.</p>
+                    <ul class="service-features">
+                        <li>API Development</li>
+                        <li>Database Design</li>
+                        <li>Cloud Integration</li>
+                    </ul>
+                </div>
 
-    <div class="footer-column">
-      <h3 class="footer-heading">Newsletter</h3>
-      <p class="footer-text">Subscribe to get updates on my latest work.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Your Email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/full-stack-icon.png" class="icon-image" alt="Full-Stack Solutions">
+                    </div>
+                    <h3>Full-Stack Solutions</h3>
+                    <p>Complete web applications from front to back with seamless integration between all components.</p>
+                    <ul class="service-features">
+                        <li>End-to-End Development</li>
+                        <li>System Architecture</li>
+                        <li>DevOps Setup</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/ui-ux-icon.png" class="icon-image" alt="UI/UX Design">
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered designs that improve engagement and conversion through intuitive interfaces.</p>
+                    <ul class="service-features">
+                        <li>Wireframing & Prototyping</li>
+                        <li>User Research</li>
+                        <li>Interaction Design</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/mobile-devolopment-icon.png" class="icon-image" alt="Mobile-First Development">
+                    </div>
+                    <h3>Mobile-First Development</h3>
+                    <p>Web applications designed primarily for mobile users with progressive enhancement for desktop.</p>
+                    <ul class="service-features">
+                        <li>PWA Development</li>
+                        <li>Touch Optimization</li>
+                        <li>Offline Capabilities</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/icons/performance-icon.png" class="icon-image" alt="Performance Optimization">
+                    </div>
+                    <h3>Performance Optimization</h3>
+                    <p>Make your existing applications faster, more efficient, and scalable.</p>
+                    <ul class="service-features">
+                        <li>Code Audits</li>
+                        <li>Lazy Loading</li>
+                        <li>Caching Strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> Vikum Prabhath. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </div>
+    <!-- ======================
+         PROJECTS SECTION
+         ====================== -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <p class="section-subtitle">Some of my recent work</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/projects/project1.jpg" alt="E-Commerce Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
+                                <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>Full-featured online store with payment integration</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/projects/project2.jpg" alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
+                                <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>Productivity application with real-time updates</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/projects/project3.jpg" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
+                                <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>Modern responsive portfolio design</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Additional projects (hidden by default) -->
+                <div class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="assets/projects/project1.jpg" alt="E-Commerce Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
+                                <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>Full-featured online store with payment integration</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="assets/projects/project2.jpg" alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
+                                <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>Productivity application with real-time updates</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="assets/projects/project3.jpg" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i> View</a>
+                                <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>Modern responsive portfolio design</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Back to Top Button -->
-  <div class="back-to-top">
-    <a href="#home" aria-label="Back to top">
-      <img src="assets/icons/arrow-up.png" alt="Up arrow" class="back-to-top-icon">
-    </a>
-  </div>
-</footer>
-    <!-- JavaScript for Typewriter Effect -->
+            <div class="view-more">
+                <a id="view-all-btn" class="btn">View All Projects</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Add right before </body> -->
-<div class="bubbles">
-  <!-- Bubbles will be added by JavaScript -->
-</div>
-<canvas id="particles"></canvas>
+    <!-- ======================
+         CONTACT SECTION
+         ====================== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p class="section-subtitle">Let's discuss your project or just say hello!</p>
+            
+            <div class="contact-container">
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <img src="assets/icons/gmail-icon.png" alt="Email" class="icon-img">
+                        </div>
+                        <h3>Email Me</h3>
+                        <p>vikumprabhath4@gmail.com</p>
+                        <a href="mailto:vikumprabhath4@gmail.com" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <img src="assets/icons/call-icon.png" alt="Call" class="icon-img">
+                        </div>
+                        <h3>Call Me</h3>
+                        <p>+94 76 2511 445</p>
+                        <a href="tel:+94762511445" class="contact-link">Call Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <img src="assets/icons/whatsapp-icon.png" alt="Whatsapp" class="icon-img">
+                        </div>
+                        <h3>Whatsapp</h3>
+                        <p>+94 76 2511 445</p>
+                        <a href="https://wa.me/94762511445" class="contact-link">Send Message <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <div class="submit-icon">
+                                <img src="assets/icons/send-icon.png" alt="Send" class="send-icon"> 
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
 
-<script src="particles.js"></script>
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.123456789012!2d79.918527!3d6.847444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTAnNTAuOCJOIDc5wrA1NScwNi43IkU!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus&z=15" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="google-map">
+                </iframe>
+            </div>
+            
+            <!-- Floating Contact Bubble -->
+            <div class="contact-bubble">
+                <img src="assets/icons/contact-icon.png" alt="Contact Me" class="bubble-icon">
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ======================
+         FOOTER
+         ====================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Columns -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Vikum Prabhath</h3>
+                <p class="footer-text">Full Stack Developer & UI/UX Designer creating digital experiences that matter.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/VikumPrabhath" target="_blank" class="footer-social-icon"><img src="assets/icons/github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/vikum-prabhath-a944a6298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="footer-social-icon"><img src="assets/icons/linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/share/1P2zuqu3gf/" target="_blank"  class="footer-social-icon"><img src="assets/icons/facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/vikum_prabhath/profilecard/?igsh=MXkwMzgxdHoxZmxvOA==" target="_blank" class="footer-social-icon"><img src="assets/icons/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
 
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p class="footer-text">Subscribe to get updates on my latest work.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Vikum Prabhath. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top">
+            <a href="#home" aria-label="Back to top">
+                <img src="assets/icons/arrow-up.png" alt="Up arrow" class="back-to-top-icon">
+            </a>
+        </div>
+    </footer>
+
+    <!-- ======================
+         MODALS & POPUPS
+         ====================== -->
     <!-- Certificate Popup Container -->
-<div class="certificate-popup">
-  <div class="popup-overlay"></div>
-  <div class="popup-content">
-    <button class="close-popup">&times;</button>
-    <img src="assets/certificates/oracle-database-cert.png" alt="Oracle Database Certification" class="certificate-image">
-    <div class="popup-actions">
+    <div class="certificate-popup">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <img src="assets/certificates/oracle-database-cert.png" alt="Oracle Database Certification" class="certificate-image">
+            <div class="popup-actions">
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    <!-- ======================
+         SCRIPTS
+         ====================== -->
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
 </body>
-
-
-
 </html>
