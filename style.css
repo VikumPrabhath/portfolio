@@ -1171,6 +1171,14 @@
 ;
 }
 
+.project-section-subtitle {
+  text-align: center;
+  color: #054d5f;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -1368,6 +1376,14 @@
   overflow: hidden;
 }
 
+.contact-section-subtitle {
+  text-align: center;
+  color: #013f4e;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
 .contact-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1544,6 +1560,37 @@
   position: relative;
   transition: all 0.3s ease;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .submit-btn{
+    justify-self: center;
+  }
+
+  .contact-icon{
+    justify-self: center;
+  }
+
+  .contact-card h3{
+    text-align: center;
+  }
+  .contact-card p{
+    text-align: center;
+  }
+
+  .contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.contact-link i {
+  text-align: center;
+  justify-self: center;
+}
 }
 
 .submit-btn span {
@@ -1732,6 +1779,7 @@
     bottom: 20px;
     right: 20px;
   }
+
 }
 
 /* Footer Styles */
