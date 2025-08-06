@@ -130,7 +130,7 @@
   min-width: 300px;
 }
 
-@media (max-with:640){
+@media (max-with:480){
   .hero-content {
     display: flex;
     flex-direction: column;
