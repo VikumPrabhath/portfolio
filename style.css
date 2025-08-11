@@ -118,7 +118,6 @@
 .hero-content-left {
   flex: 1;
   order: 1;
-  min-width: 250px;
 }
 
 .hero-content-right {
@@ -185,7 +184,6 @@
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
-    width: 50%;
     }
 
   .hero-content-right {
@@ -195,7 +193,7 @@
     }
 
   .image-slideshow {
-    height: 400px; /* Slightly smaller on mobile */
+    height: 400px; 
     position: relative;
     width: 100%;
     align-items: center;
@@ -206,7 +204,7 @@
   }
 
   .social-icons {
-    justify-content: center; /* Center social icons */
+    justify-content: center; 
   }
 
   .hero-image {
@@ -215,27 +213,19 @@
   }
 }
 
-/* For mobile devices */
-@media (max-width: 768px) {
-  
-  #typewriter {
-    font-size: 1.0rem;
-    min-height: 100px;
-  }
-}
 /* Image Slideshow Styles */
 .image-slideshow {
   position: relative;
   width: 100%;
   max-width: 400px;
-  height: 500px; /* Set a fixed height based on your image size */
+  height: 500px; 
 }
 
 .hero-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures images fill container nicely */
+  object-fit: cover; 
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   animation: float 3s ease-in-out infinite;
@@ -246,10 +236,9 @@
 
 .hero-image.active {
   opacity: 1;
-  z-index: 2; /* Active image stays on top */
+  z-index: 2; 
 }
 
-/* Make sure floating animation continues */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
@@ -269,25 +258,23 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.2; /* Makes background slightly see-through */
+  opacity: 0.2; 
 }
 
-/* Social Icons - Simple Style */
 .social-icons {
-  display: flex;          /* Makes icons sit side by side */
-  gap: 15px;             /* Space between icons */
-  margin-top: 20px;      /* Space above the icons */
+  display: flex;         
+  gap: 15px;            
+  margin-top: 20px;      
 }
 
 .social-icon {
-  transition: transform 0.3s;  /* Makes the hover effect smooth */
+  transition: transform 0.3s;  
 }
 
 .social-icon:hover {
-  transform: scale(1.3);  /* Makes icon grow a little when mouse hovers */
+  transform: scale(1.3);  
 }
 
-/* Makes the icons shake when clicked */
 .social-icon:active {
   animation: shake 0.5s;
 }
@@ -308,6 +295,15 @@
   line-height: 1.2;
   color: #16212c;
   min-height: 180px;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  
+  #typewriter {
+    font-size: 1.5rem;
+    min-height: 100px;
+  }
 }
 
 #typewriter div {
@@ -355,17 +351,17 @@
 
 
 .navbar {
-    background-color: #000303e7; /* Semi-transparent black */
+    background-color: #000303e7; 
     z-index: 100;
-    padding: 10px 20px; /* Add padding for better spacing */
+    padding: 10px 20px;
     margin-top: 0%;
-    margin: 0 auto; /* Center the navbar */
+    margin: 0 auto; 
 }
 
 .nav-container {
     max-width: 100%;
     display: flex;
-    justify-content: flex-end; /* Changed from 'space-between' to push links to right */
+    justify-content: flex-end; 
     align-items: center;
 }
 
@@ -373,33 +369,32 @@
     display: flex;
     list-style: none;
     gap: 20px;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0; 
+    padding: 0; 
 }
 
 .nav-links a {
-    color: #ffffff; /* Light blue to match your gradient */
+    color: #ffffff; 
     text-decoration: none;
     font-weight: 550;
-    font-size: 16px; /* Adjusted for better visibility */
+    font-size: 16px; 
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #01bef7; /* Light blue to match your gradient */
-    text-shadow: 0 0 5px #01bef7; /* Optional glow effect */
+    color: #01bef7; 
+    text-shadow: 0 0 5px #01bef7; 
 }
 
 @media (max-width: 768px) {
 
     
     .nav-links a {
-        font-size: 13px; /* Slightly larger font size for better readability */
+        font-size: 13px; 
     }
   
 }
 
-/* About Section Styles */
 .about-section {
   padding: 100px 0;
   background-color: rgba(255, 255, 255, 0.8);
@@ -478,6 +473,16 @@
   animation: spin 8s linear infinite;
   z-index: 1;
   gap: 70px;
+}
+
+@media (max-width: 768px) {
+  .circle-spin {
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -10px;
+    left: -15px;
+  }
+  
 }
 
 .about-text {
@@ -1374,7 +1379,6 @@
   }
 }
 
-/* Add this to your existing CSS */
 .hidden-project {
   display: none;
   opacity: 0;
@@ -1607,6 +1611,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .contact-card {
+    text-align: center;
+  }
+
   .submit-btn{
     justify-self: center;
   }
