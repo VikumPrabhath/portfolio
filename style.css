@@ -1267,6 +1267,12 @@
   transition: transform 0.5s ease;
 }
 
+@media (max-width: 768px) {
+  .project-image {
+    height: 200px;
+  }
+  
+}
 .project-card:hover .project-image img {
   transform: scale(1.05);
 }
@@ -1374,9 +1380,6 @@
     grid-template-columns: 1fr;
   }
   
-  .project-image {
-    height: 200px;
-  }
 }
 
 .hidden-project {
